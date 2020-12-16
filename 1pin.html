@@ -1,0 +1,118 @@
+<html>
+    <head></head>
+    <body>
+        <!--
+            accept:向服务器传递数据的地址写在后面
+            enctype:encoding type 编码类型，多个组成部分/表格数据，可能包含用户名、照片等
+            method：提交方式
+                get：数据量少，实现简单，不安全
+                post：数据量大，实现相对复杂，非常安全
+        -->
+        <form accept="#" enctype="multipart/form-data" method="POST">
+            <!--
+                1.text类型，文本类型。name：标签的名字。size：输入框的长度。maxlength：允许最大输入的长度。
+                placeholder：淡灰色的输入提示。value：默认的用户名
+            -->
+
+
+            <span>用户名：</span>
+            <input type="text" name="userName" size="20" maxlength="20" placeholder="请输入您的用户名：" value="马保国"/>
+            <!--
+                2.password类型
+            -->
+            <span>密&nbsp;&nbsp;&nbsp;码:</span>
+            <input type="password" name="userName" size="20" maxlength="20" placeholder="请输入您的密码："/>
+
+            <hr>
+    
+            <!--增强版标签-->
+            <!--label for属性：和输入框建立起联系-->
+            <br>
+            <label for="uname">用户名：</label>
+            <input type="text" id="uname" name="userName" size="20" maxlength="20" placeholder="请输入您的用户名：" value="马保国"/>
+
+            <label for="heiying">密&nbsp;&nbsp;&nbsp;码:</label>
+            <input type="password" id="heiying" name="userName" size="20" maxlength="20" placeholder="请输入您的密码："/>
+            <br/>
+            <br>
+            <!--
+                3.file accept:指定能够接收的文件 multiple:是否允许上传多个文件
+            -->
+            <label for="photoid">大头照</label>
+            <input type="file" name="photo" id="photoid" accept=".jpg,.jpe,.png"/>
+            <br/>
+            <br>
+            <!--
+                4.radio 单选框
+                name 需要保持一致
+                id不同
+                value：传递给服务器的值
+            -->
+            <label for="">性别：</label>
+            <input type="radio" name="sex" id="man" value="man"/>男
+            <input type="radio" name="sex" id="woman" value="woman"/>女
+            <input type="radio" name="sex" id="zhong" value="zhong"/>其他
+            <br/>
+            <br>
+            <!--
+                5.checkbox 复选框
+                     name：需要保持一致
+                     id不同 value不同
+            -->
+            <input type="checkbox" name="hobby" id="chang" value="chang"/>唱
+            <input type="checkbox" name="hobby" id="dance" value="dance"/>跳
+            <input type="checkbox" name="hobby" id="rap" value="rap"/>rap
+            <input type="checkbox" name="hobby" id="basketball"/>篮球
+            <input type="checkbox" name="hobby" id="football"/>足球
+            <br/>
+            <br>
+            <!--
+                6.reset 重置按钮
+                  value:显示在按钮之上
+            -->
+            <input type="reset" name="reset" value="重置"/>
+            <input type="button" name="button" value="普通按钮"/>
+            <input type="submit" name="submit" value="提交"/>
+             <!--
+                7.hidden 隐藏域
+                      便于服务器使用，还不想让普通用户看见
+            -->
+            <input type="hidden" name="unmber" value="007"/>
+            <br/>
+            <br>
+            <!--
+                textarea文本域
+                cole列
+                rows行
+                placeholder 提示
+            -->
+            <span>简介：</span>
+            <textarea name="jianjie" cols="50" rows="5" placeholder="请输入您的简介..."></textarea>
+            <br/>
+            <br>
+            <!--
+                9.选择列表 select option
+                      value：向后台服务器传递的数据
+            -->
+            <span>省份：</span>
+            <select name="province">
+                <option>请选择您的省份</option>
+                <option value="hunan">湖南</option>
+                <option value="hubei">湖北</option>
+                <option value="guangxi">广西</option>
+                <option value="guangdong">广东</option>
+            </select>
+            <br/>
+
+
+
+
+              
+           
+           
+
+
+
+        </form>
+    </body>
+</html>
